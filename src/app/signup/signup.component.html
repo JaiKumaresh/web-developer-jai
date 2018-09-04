@@ -1,0 +1,16 @@
+<div class="signup-form">
+	<h4>Create account</h4>
+	<form [formGroup]="signupForm" (ngSubmit)="onSubmit()"><!--  novalidate> -->
+		<input type="text" formControlName="name" placeholder="Enter your name" (ngModelChange)="enterText('name')" [ngStyle]="{'margin-bottom': signupErr.name ? '0px':'20px' }" required />
+		<p *ngIf="signupErr.name" class="err">Name is requried</p>
+		<input type="email" formControlName="email" placeholder="Enter your email id" (ngModelChange)="enterText('email')" [ngStyle]="{'margin-bottom': signupErr.email ? '0px':'20px' }" required />
+		<p *ngIf="signupErr.email" class="err">Email is requried</p>
+		<input type="text" formControlName="address" placeholder="Enter your address" (ngModelChange)="enterText('address')" [ngStyle]="{'margin-bottom': signupErr.address ? '0px':'20px' }" required />
+		<p *ngIf="signupErr.address" class="err">Address is requried</p>
+		<input type="number" formControlName="mobileno" placeholder="Enter your mobile no" (ngModelChange)="enterText('mobileno')" [ngStyle]="{'margin-bottom': signupErr.mobileno ? '0px':'20px' }" required />
+		<p *ngIf="signupErr.mobileno" class="err">Mobile no is requried</p>
+		<input type="password" formControlName="password" placeholder="Enter your password" (ngModelChange)="enterText('password')" [ngStyle]="{'margin-bottom': signupErr.password ? '0px':'20px' }" required />
+		<p *ngIf="signupErr.password" class="err">Password is requried</p>
+		<button type="submit">Create</button>
+	</form>
+</div>

@@ -1,0 +1,10 @@
+<div class="login-form">
+	<h4>Sign in to your account</h4>
+	<form [formGroup]="loginForm" (ngSubmit)="onSubmit()"><!--  novalidate> -->
+		<input type="email" formControlName="email" placeholder="Enter your email id" (ngModelChange)="enterText('email')" [ngStyle]="{'margin-bottom': loginErr.email ? '0px':'20px' }" required />
+		<p *ngIf="loginErr.email" class="err">Email is requried</p>
+		<input type="password" formControlName="pwd" placeholder="Enter your password" (ngModelChange)="enterText('pwd')" [ngStyle]="{'margin-bottom': loginErr.pwd ? '0px':'20px' }" required />
+		<p *ngIf="loginErr.pwd" class="err">Password is requried</p>
+		<button type="submit">Sign in</button>
+	</form>
+</div>

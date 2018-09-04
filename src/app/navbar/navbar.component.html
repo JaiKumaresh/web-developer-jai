@@ -1,0 +1,7 @@
+<div class="nav">
+	<h2>logo</h2>
+	<ul>
+		<li *ngIf="checkLS('curUserId')" (click)="signout()">Sign out</li>
+		<li *ngIf="!checkLS('curUserId')" [routerLink]="[router.url != '/signup' ? '/signup' : '/login']">{{menuTitle}}</li>
+	</ul>
+</div>
