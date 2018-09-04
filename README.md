@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation
 
-To get started, you need Node.js. Your go to project location and Run `npm i`.
+To get started, you need Node.js. Go to correct project location in command prompt and Run `npm i`.
 
 ## Development server
 
