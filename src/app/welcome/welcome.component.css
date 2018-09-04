@@ -1,4 +1,6 @@
-
+div {
+	background: url('/assets/images/welcome-banner.png');
+}
 .welcome-user {
 	text-align: center;
 }
